@@ -25,5 +25,24 @@ namespace student_helper
             InitializeComponent();
             //yo
         }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void create_Click(object sender, RoutedEventArgs e)
+        {
+            var win1 = new Window1();
+            win1.Show();
+            this.Close();
+        }
+
+        private void schedule_Click(object sender, RoutedEventArgs e)
+        {
+            var win2 = new Window2();
+            win2.Show();
+            this.Close();
+        }
     }
 }

@@ -56,17 +56,26 @@ namespace student_helper
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader reader;
                 reader = sqlCmd.ExecuteReader();
-                List<Event> eventList = new List<Event>();  
+                List<Schedule> eventList = new List<Schedule>();
                 while (reader.Read())
                 {
-                    if (reader["EventType"].ToString().Equals("Schedule"))
+                    if (reader["EventType"].ToString().Equals("Schedule") || reader["EventType"].ToString().Equals("Other"))
                     {
-                        Event Person = new Schedule();
-                        Person.CPRNR = reader["P_CPRNR"].ToString();
-                        Person.Name = reader["P_Name"].ToString();
-                        PersonList.Add(Person);
+                        Schedule events = new Schedule();
+                        events.Startdate = Convert.ToDateTime(reader["Startdate"]);
+                        events.Enddate = Convert.ToDateTime(reader["Enddate"]);
+                        events.Comment = reader["Comment"].ToString();
+                        events.EventType = reader["EventType"].ToString();
+                        eventList.Add(events);
                     }
-                    
+                    if (reader["EventType"].ToString().Equals("Homework"))
+                    {
+                        Schedule events = new Schedule();
+                        events.Enddate = Convert.ToDateTime(reader["Enddate"]);
+                        events.Comment = reader["Comment"].ToString();
+                        events.EventType = reader["EventType"].ToString();
+                        eventList.Add(events);
+                    }
                 }
             }
             catch (Exception e)
