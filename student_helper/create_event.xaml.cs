@@ -22,6 +22,9 @@ namespace student_helper
         public Window1()
         {
             InitializeComponent();
+            typebox.Items.Add("Skema");
+            typebox.Items.Add("Lektier");
+            typebox.Items.Add("Andre");
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -37,6 +40,11 @@ namespace student_helper
             main.Show();
             this.Close();
             MessageBox.Show("Begivenheden er gemt");
+        }
+
+        private void typebox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

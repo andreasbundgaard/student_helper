@@ -20,7 +20,7 @@
         <Label Content="Tidspunkt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,63,0,0"/>
         <TextBox Name="starttid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="317,66,0,0"/>
         <TextBox Name="sluttid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="317,110,0,0"/>
-        <ComboBox Name="typebox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="107,25,0,0"/>
+        <ComboBox Name="typebox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="107,25,0,0" SelectionChanged="typebox_SelectionChanged"/>
 
     </Grid>
 </Window>
