@@ -18,9 +18,11 @@
         <DatePicker Name="slutdato" Margin="107,108,265,175"/>
         <Label Content="Tidspunkt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,106,0,0"/>
         <Label Content="Tidspunkt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,63,0,0"/>
-        <TextBox Name="starttid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="317,66,0,0"/>
-        <TextBox Name="sluttid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="317,110,0,0"/>
         <ComboBox Name="typebox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="107,25,0,0" SelectionChanged="typebox_SelectionChanged"/>
+        <ComboBox Name="starthour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="317,63,0,0" SelectionChanged="starthour_SelectionChanged"/>
+        <ComboBox Name="startminute" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="366,63,0,0" SelectionChanged="startminute_SelectionChanged"/>
+        <ComboBox Name="sluthour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="317,112,0,0" SelectionChanged="sluthour_SelectionChanged"/>
+        <ComboBox Name="slutminute" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="366,112,0,0" SelectionChanged="slutminute_SelectionChanged"/>
 
     </Grid>
 </Window>

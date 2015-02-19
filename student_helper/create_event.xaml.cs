@@ -25,6 +25,18 @@ namespace student_helper
             typebox.Items.Add("Skema");
             typebox.Items.Add("Lektier");
             typebox.Items.Add("Andre");
+
+            for (int i = 0; i < 24; i++ )
+            {
+                starthour.Items.Add(i);
+                sluthour.Items.Add(i);
+            }
+
+            for (int i = 0; i < 60; i++)
+            {
+                startminute.Items.Add(i);
+                slutminute.Items.Add(i);
+            }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -43,6 +55,26 @@ namespace student_helper
         }
 
         private void typebox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void starthour_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void startminute_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void sluthour_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void slutminute_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
