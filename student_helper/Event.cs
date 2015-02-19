@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace student_helper
 {
-    class Event
+    interface Event
     {
-        public DateTime EndDate { get; set; }
-        public string Comment { get; set; }
+        public DateTime EndDate;
+        public string Comment;
 
     }
 }
