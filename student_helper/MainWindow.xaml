@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="350">
     <Grid>
-        <Button Name="createButton" Content="Opret begivenhed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,66,0,0" Height="50" Click="create_Click"/>
-        <Button Name="scheduleButton" Content="Se ugeplan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,137,0,0" Height="50" Click="schedule_Click"/>
-        <Button Name="exitButton" Content="Luk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,214,0,0" Height="50" Click="exit_Click"/>
+        <Button Name="createButton" Content="Opret begivenhed" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,66,0,0" Height="50" Click="create_Click"/>
+        <Button Name="scheduleButton" Content="Se ugeplan" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,137,0,0" Height="50" Click="schedule_Click"/>
+        <Button Name="exitButton" Content="Luk" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,214,0,0" Height="50" Click="exit_Click"/>
 
     </Grid>
 </Window>
