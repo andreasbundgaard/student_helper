@@ -10,39 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace student_helper
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-            //yo
         }
 
-        private void exit_Click(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow main = new MainWindow();
+            main.Show();
             this.Close();
         }
 
-        private void create_Click(object sender, RoutedEventArgs e)
+        private void save_click(object sender, RoutedEventArgs e)
         {
-            var win1 = new Window1();
-            win1.Show();
+            MainWindow main = new MainWindow();
+            main.Show();
             this.Close();
-        }
-
-        private void schedule_Click(object sender, RoutedEventArgs e)
-        {
-            var win2 = new Window2();
-            win2.Show();
-            this.Close();
+            MessageBox.Show("Begivenheden er gemt");
         }
     }
 }

@@ -5,7 +5,7 @@
     <Grid>
         <Button Name="createButton" Content="Opret begivenhed" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,66,0,0" Height="50" Click="create_Click"/>
         <Button Name="scheduleButton" Content="Se ugeplan" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,137,0,0" Height="50" Click="schedule_Click"/>
-        <Button Name="exitButton" Content="Luk" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,214,0,0" Height="50" Click="exit_Click"/>
+        <Button Name="exitButton" Content="Luk" FontSize="20" Command="{Binding CloseCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="79,214,0,0" Height="50" Click="exit_Click"/>
 
     </Grid>
 </Window>

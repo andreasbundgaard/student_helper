@@ -53,13 +53,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DatabaseController.cs" />
+    <Compile Include="create_event.xaml.cs">
+      <DependentUpon>create_event.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Day.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Homework.cs" />
     <Compile Include="Other.cs" />
     <Compile Include="Plan.cs" />
     <Compile Include="Schedule.cs" />
+    <Compile Include="schedule_view.xaml.cs">
+      <DependentUpon>schedule_view.xaml</DependentUpon>
+    </Compile>
+    <Page Include="create_event.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="schedule_view.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

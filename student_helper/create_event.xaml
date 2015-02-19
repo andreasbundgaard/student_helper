@@ -1,0 +1,10 @@
+﻿<Window x:Class="student_helper.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="350" Width="500">
+    <Grid>
+        <Button Name="save_event" Content="Gem" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="395,279,0,0" Click="save_click"/>
+        <Button Name="back" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="303,279,0,0" Click="back_Click"/>
+
+    </Grid>
+</Window>
