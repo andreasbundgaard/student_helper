@@ -8,6 +8,10 @@ namespace student_helper
 {
     class ControllerFacade
     {
-
+        DatabaseController DB = new DatabaseController();
+        public bool SaveEvent(DateTime starttid, DateTime sluttid, string comment, string eventtype)
+        {
+            return DB.AddEventToDb(starttid, sluttid, comment, eventtype);
+        }
     }
 }

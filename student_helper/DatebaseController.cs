@@ -21,7 +21,7 @@ namespace student_helper
                 );
             return con;
         }
-        public void AddEventToDb(DateTime startdate, DateTime enddate, string comment, string eventtype)
+        public bool AddEventToDb(DateTime startdate, DateTime enddate, string comment, string eventtype)
         {
             SqlConnection con = connectToSql();
             try
@@ -34,10 +34,13 @@ namespace student_helper
                 sqlCmd.Parameters.Add(new SqlParameter("@Comment", comment));
                 sqlCmd.Parameters.Add(new SqlParameter("@EventType", eventtype));
                 sqlCmd.ExecuteNonQuery();
+
+                return true;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                return false;
             }
             finally
             {
