@@ -63,7 +63,7 @@ namespace student_helper
                     {
                         Schedule events = new Schedule();
                         events.Startdate = Convert.ToDateTime(reader["Startdate"]);
-                        events.EndDate = Convert.ToDateTime(reader["Enddate"]);
+                        events.Enddate = Convert.ToDateTime(reader["Enddate"]);
                         events.Comment = reader["Comment"].ToString();
                         events.EventType = reader["EventType"].ToString();
                         eventList.Add(events);
