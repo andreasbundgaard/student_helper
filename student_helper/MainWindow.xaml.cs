@@ -23,6 +23,7 @@ namespace student_helper
         public MainWindow()
         {
             InitializeComponent();
+            //yo
         }
     }
 }
