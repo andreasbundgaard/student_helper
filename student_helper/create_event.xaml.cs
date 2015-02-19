@@ -48,6 +48,16 @@ namespace student_helper
 
         private void save_click(object sender, RoutedEventArgs e)
         {
+            DateTime stdato;
+            stdato = Convert.ToDateTime(startdato.SelectedDate);
+            TimeSpan starttid = new TimeSpan(Convert.ToInt32(starthour), Convert.ToInt32(startminute), 0, 0);
+            stdato.Add(starttid);
+            DateTime sldato;
+            sldato = Convert.ToDateTime(slutdato.SelectedDate);
+            TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour), Convert.ToInt32(slutminute), 0, 0);
+            sldato.Add(sluttid);
+            ControllerFacade CF = new ControllerFacade();
+            bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsebox, typebox.SelectedItem)
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
