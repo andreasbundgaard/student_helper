@@ -50,11 +50,11 @@ namespace student_helper
         {
             DateTime stdato;
             stdato = Convert.ToDateTime(startdato.SelectedDate);
-            TimeSpan starttid = new TimeSpan(Convert.ToInt32(starthour), Convert.ToInt32(startminute), 0, 0);
+            TimeSpan starttid = new TimeSpan(Convert.ToInt32(starthour.SelectedItem), Convert.ToInt32(startminute.SelectedItem), 0, 0);
             stdato.Add(starttid);
             DateTime sldato;
             sldato = Convert.ToDateTime(slutdato.SelectedDate);
-            TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour), Convert.ToInt32(slutminute), 0, 0);
+            TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour.SelectedItem), Convert.ToInt32(slutminute.SelectedItem), 0, 0);
             sldato.Add(sluttid);
             ControllerFacade CF = new ControllerFacade();
             bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsesbox.Text, typebox.SelectedItem.ToString());
@@ -68,7 +68,7 @@ namespace student_helper
             else
                 if (savecheck == false)
                 {
-                    MessageBox.Show("Blev ikke gemt, prøv igen")
+                    MessageBox.Show("Blev ikke gemt, prøv igen");
                 }
         }
 
