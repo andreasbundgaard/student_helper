@@ -8,7 +8,8 @@ namespace student_helper
 {
     interface Event
     {
-        public DateTime EndDate;
+        public string EventType;
+        public DateTime Enddate;
         public string Comment;
 
     }
