@@ -57,7 +57,7 @@ namespace student_helper
             TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour), Convert.ToInt32(slutminute), 0, 0);
             sldato.Add(sluttid);
             ControllerFacade CF = new ControllerFacade();
-            bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsebox, typebox.SelectedItem)
+            bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsesbox.Text, typebox.SelectedItem.ToString());
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();

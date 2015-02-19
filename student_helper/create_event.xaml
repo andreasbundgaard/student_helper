@@ -9,11 +9,6 @@
         <Label Content="Slut dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,108,0,0"/>
         <Label Content="Type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,21,0,0"/>
         <Label Content="Start dato:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,63,0,0"/>
-        <RichTextBox Name="beskrivelsebox" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="178" Margin="107,169,0,0">
-            <FlowDocument>
-                <Paragraph/>
-            </FlowDocument>
-        </RichTextBox>
         <DatePicker Name="startdato" Margin="107,65,265,216"/>
         <DatePicker Name="slutdato" Margin="107,108,265,175"/>
         <Label Content="Tidspunkt:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,106,0,0"/>
@@ -25,6 +20,7 @@
         <ComboBox ScrollViewer.VerticalScrollBarVisibility="Disabled" Name="slutminute" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" Margin="371,112,0,0" SelectionChanged="slutminute_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Margin="363,65,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Margin="363,115,0,0"/>
+        <TextBox Name="beskrivelsesbox" HorizontalAlignment="Left" Height="141" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Margin="107,160,0,0"/>
 
     </Grid>
 </Window>
