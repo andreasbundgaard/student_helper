@@ -50,12 +50,12 @@ namespace student_helper
         {
             DateTime stdato;
             stdato = Convert.ToDateTime(startdato.SelectedDate);
-            TimeSpan starttid = new TimeSpan(Convert.ToInt32(starthour.SelectedItem), Convert.ToInt32(startminute.SelectedItem), 0, 0);
-            stdato.Add(starttid);
+            TimeSpan starttid = new TimeSpan(Convert.ToInt32(starthour.SelectedItem), Convert.ToInt32(startminute.SelectedItem), 0);
+            stdato = stdato + starttid;
             DateTime sldato;
             sldato = Convert.ToDateTime(slutdato.SelectedDate);
-            TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour.SelectedItem), Convert.ToInt32(slutminute.SelectedItem), 0, 0);
-            sldato.Add(sluttid);
+            TimeSpan sluttid = new TimeSpan(Convert.ToInt32(sluthour.SelectedItem), Convert.ToInt32(slutminute.SelectedItem), 0);
+            sldato = sldato + sluttid;
             ControllerFacade CF = new ControllerFacade();
             bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsesbox.Text, typebox.SelectedItem.ToString());
             if (savecheck == true)

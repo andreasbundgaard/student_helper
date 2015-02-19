@@ -15,9 +15,9 @@ namespace student_helper
         {
             SqlConnection con = new SqlConnection(
                 "Server=ealdb1.eal.local;" +
-                "Database=EJL15_DB;" +
-                "User Id=ejl15_usr;" +
-                "Password=Baz1nga15"
+                "Database=EJL03_DB;" +
+                "User Id=ejl03_usr;" +
+                "Password=Baz1nga3"
                 );
             return con;
         }
