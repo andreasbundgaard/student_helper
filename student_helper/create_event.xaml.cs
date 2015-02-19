@@ -58,10 +58,18 @@ namespace student_helper
             sldato.Add(sluttid);
             ControllerFacade CF = new ControllerFacade();
             bool savecheck = CF.SaveEvent(stdato, sldato, beskrivelsesbox.Text, typebox.SelectedItem.ToString());
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
-            MessageBox.Show("Begivenheden er gemt");
+            if (savecheck == true)
+            {
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
+                MessageBox.Show("Begivenheden er gemt");
+            }
+            else
+                if (savecheck == false)
+                {
+                    MessageBox.Show("Blev ikke gemt, prøv igen")
+                }
         }
 
         private void typebox_SelectionChanged(object sender, SelectionChangedEventArgs e)
