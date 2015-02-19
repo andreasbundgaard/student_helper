@@ -59,10 +59,18 @@ namespace student_helper
                 List<Schedule> eventList = new List<Schedule>();
                 while (reader.Read())
                 {
-                    if (reader["EventType"].ToString().Equals("Schedule"))
+                    if (reader["EventType"].ToString().Equals("Schedule") || reader["EventType"].ToString().Equals("Other"))
                     {
                         Schedule events = new Schedule();
                         events.Startdate = Convert.ToDateTime(reader["Startdate"]);
+                        events.Enddate = Convert.ToDateTime(reader["Enddate"]);
+                        events.Comment = reader["Comment"].ToString();
+                        events.EventType = reader["EventType"].ToString();
+                        eventList.Add(events);
+                    }
+                    if (reader["EventType"].ToString().Equals("Homework"))
+                    {
+                        Schedule events = new Schedule();
                         events.Enddate = Convert.ToDateTime(reader["Enddate"]);
                         events.Comment = reader["Comment"].ToString();
                         events.EventType = reader["EventType"].ToString();
