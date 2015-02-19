@@ -45,5 +45,39 @@ namespace student_helper
                 con.Dispose();
             }
         }
+        public void GetEvents(string eventtype)
+        {
+            SqlConnection con = connectToSql();
+            try
+            {
+                con.Open();
+                SqlCommand sqlCmd = new SqlCommand("GetEvent", con);
+                sqlCmd.Parameters.Add(new SqlParameter("@EventType", eventtype));
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader;
+                reader = sqlCmd.ExecuteReader();
+                List<Event> eventList = new List<Event>();  
+                while (reader.Read())
+                {
+                    if (reader["EventType"].ToString().Equals("Schedule"))
+                    {
+                        Event Person = new Schedule();
+                        Person.CPRNR = reader["P_CPRNR"].ToString();
+                        Person.Name = reader["P_Name"].ToString();
+                        PersonList.Add(Person);
+                    }
+                    
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
     }
 }
